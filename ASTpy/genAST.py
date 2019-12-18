@@ -18,13 +18,18 @@ for root, dirs, files in os.walk("."):
 file_content = ""
 
 for file in list:
+    file = file.split('/', 1)[-1]
+    #print(file)
     tree.parse(file)
     #newStuff = file_get_contents(file)
     #file_content  = file_content + newStuff;
 
 #print(file_content);
 
+
 tree.parse(file_content);
+
+
 
 
 
