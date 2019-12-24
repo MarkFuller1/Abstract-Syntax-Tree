@@ -1,6 +1,7 @@
 import ast as tree
 import os
 
+
 def file_get_contents(filename):
     with open(filename, encoding = "ISO-8859-1") as f:
         return f.read()
