@@ -12,12 +12,17 @@ def main():
         #print(correctPath + " " + str(filename))
 
         comparison = filecmp.cmp(str(filename), correctPath)
+        print(str(filename) + " " + str(comparison))
+
         if comparison == False:
-            print(False)
+            allGood = False
+            print("\t^^ Files do not match");
             sys.exit()
 
-
-    print("All Tests Passed")
+    if allGood == True:
+        print("All Tests Passed")
+    else:
+        print("One of the tests failed")
 
 if __name__ == "__main__":
     main()

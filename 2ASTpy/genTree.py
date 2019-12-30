@@ -1,7 +1,13 @@
+# Mark Fuller
+# Dr.Cerny
+# Python - AST generator given root directory to search
+
+
 import ast
 import sys
 from pathlib import Path
 
+# search root directory recursively for .py files
 def main():
     if len(sys.argv) != 2:
         print ("Usage: python genTree.py [path/to/dir]")
