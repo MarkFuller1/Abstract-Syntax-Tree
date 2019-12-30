@@ -1,8 +1,16 @@
 import ast
+import sys
 from pathlib import Path
 
 def main():
-    for filename in Path('.').rglob('*.py'):
+    if len(sys.argv) != 2:
+        print ("Usage: python genTree.py [path/to/dir]")
+        sys.exit()
+
+    root = sys.argv[1]
+
+
+    for filename in Path(root).rglob('*.py'):
         with open(filename, "r") as source:
             tree = ast.parse(source.read())
             print(filename)
