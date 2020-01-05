@@ -6,6 +6,8 @@ This project is compiled and installed using the maven build cycle
 
 `mvn clean install package`
 
+`java -jar target/AST-0.0.1-SNAPSHOT.jar`
+
 ## Functionalilty
 
 Given a direactory acting as "root" this program will generate an abstract syntax
